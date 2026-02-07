@@ -28,7 +28,8 @@ new class extends Component {
         <div class="row g-0">
             <div class="col-5">
                 <div class="products-mini-img border-end h-100">
-                    <img src="{{ asset('storage/' . $product->image[0]) }}" class="img-fluid w-100 h-100" alt="Image">
+                    <img src="{{ asset('storage/' . ($product->image[0] ?? 'default-product-image.jpg')) }}"
+                        class="img-fluid w-100" alt="Image">
                     <div class="products-mini-icon rounded-circle bg-primary">
                         <a href="#"><i class="fa fa-eye fa-1x text-white"></i></a>
                     </div>
