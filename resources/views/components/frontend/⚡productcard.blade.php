@@ -27,7 +27,8 @@ new class extends Component {
     <div class="product-item rounded wow fadeInUp" data-wow-delay="0.1s">
         <div class="product-item-inner border rounded">
             <div class="product-item-inner-item">
-                <img src="{{ asset('storage/' . $product->image[0]) }}" class="img-fluid w-100 rounded-top" alt="">
+                <img src="{{ asset('storage/' . ($product->image[0] ?? 'default-product-image.jpg')) }}"
+                    class="img-fluid w-100 rounded-top" alt="">
                 <div class="product-new">New</div>
                 <div class="product-details">
                     <a href="{{ route('frontend.product-details', $product->slug) }}"><i
