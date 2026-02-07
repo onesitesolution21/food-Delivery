@@ -74,7 +74,16 @@ php artisan migrate
 php artisan db:seed
 ```
 
-### 5. Install Frontend Dependencies
+### 5. Create Storage Link
+
+```bash
+# Create symbolic link from public/storage to storage/app/public
+php artisan storage:link
+```
+
+This command creates a symbolic link for serving files from the storage directory.
+
+### 6. Install Frontend Dependencies
 
 ```bash
 npm install
