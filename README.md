@@ -1,52 +1,238 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Shop Application
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern e-commerce platform built with Laravel 12, featuring a responsive frontend and a powerful admin dashboard powered by Filament.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Frontend
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Product Catalog**: Browse products organized by categories
+- **Product Details**: View detailed product information with images
+- **Shopping Cart**: Add, remove, and manage items in your cart
+- **Checkout**: Complete purchase orders with account or guest checkout
+- **User Dashboard**: Track your orders and purchase history
+- **Responsive Design**: Mobile-friendly interface with Tailwind CSS
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Admin Dashboard (Filament)
 
-## Learning Laravel
+- **Product Management**: Create, edit, and manage products
+- **Category Management**: Organize products into categories
+- **Order Management**: View and process customer orders
+- **User Management**: Manage customer accounts
+- **Inventory Management**: Track product stock levels
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Backend**: [Laravel 12](https://laravel.com) - PHP web framework
+- **Admin Panel**: [Filament 5.0](https://filamentphp.com) - Admin dashboard framework
+- **Frontend**: [Livewire 4.1](https://livewire.laravel.com) - Reactive components
+- **Styling**: [Tailwind CSS 4.0](https://tailwindcss.com) & Bootstrap 5
+- **Build Tool**: [Vite](https://vitejs.dev) - Next-gen frontend tooling
+- **Database**: Laravel Migrations (database agnostic)
+- **Authentication**: Laravel built-in authentication
+- **Shopping Cart**: [Shopping Cart](https://packagist.org/packages/anayarojo/shoppingcart)
+- **Testing**: [Pest](https://pestphp.com)
 
-## Laravel Sponsors
+## Prerequisites
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- PHP 8.2 or higher
+- Composer
+- Node.js 16+ & npm
+- A database (SQLite, MySQL, PostgreSQL, etc.)
 
-### Premium Partners
+## Installation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 1. Clone or Setup the Repository
 
-## Contributing
+```bash
+cd your-project-directory
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Install PHP Dependencies
 
-## Code of Conduct
+```bash
+composer install
+```
+
+### 3. Environment Configuration
+
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+### 4. Database Setup
+
+```bash
+# Run migrations
+php artisan migrate
+
+# (Optional) Seed sample data
+php artisan db:seed
+```
+
+### 5. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+## Running the Application
+
+### Development Mode
+
+```bash
+# Terminal 1: Start the development server
+php artisan serve
+
+# Terminal 2: Build frontend assets
+npm run dev
+```
+
+The application will be available at `http://localhost:8000`
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Quick Setup
+
+Use the setup script to configure everything at once:
+
+```bash
+composer setup
+```
+
+This will:
+
+- Install PHP dependencies
+- Generate `.env` file
+- Generate application key
+- Run database migrations
+- Install npm packages
+- Build frontend assets
+
+## Project Structure
+
+```
+├── app/
+│   ├── Models/              # Eloquent models (Product, Category, Order, User, etc.)
+│   ├── Http/
+│   │   └── Controllers/     # Application controllers
+│   ├── Filament/            # Filament admin panel resources
+│   └── helper/              # Helper functions
+├── config/                  # Configuration files
+├── database/
+│   ├── migrations/          # Database migrations
+│   ├── factories/           # Model factories for testing
+│   └── seeders/             # Database seeders
+├── public/
+│   ├── frontend/            # Frontend assets (CSS, JS, images)
+│   └── index.php            # Application entry point
+├── resources/
+│   ├── views/               # Blade templates
+│   ├── css/                 # Stylesheets
+│   └── js/                  # JavaScript files
+├── routes/
+│   └── web.php              # Web routes
+├── tests/                   # Test files
+└── storage/                 # Application storage (logs, cache, etc.)
+```
+
+## Key Models
+
+### Product
+
+- Attributes: name, slug, price, quantity, sku, description, image, category_id
+- Relationships: Category, OrderItems
+
+### Category
+
+- Organize products by category
+
+### Order
+
+- Tracks customer purchases with status and timestamps
+
+### OrderItem
+
+- Line items for orders with quantity and price
+
+### User
+
+- Customer accounts with authentication
+
+## Available Routes
+
+### Frontend Routes
+
+- `GET /` - Home page
+- `GET /shop` - Product listing
+- `GET /shop/product-details/{slug}` - Product details
+- `GET /shop/cart` - Shopping cart
+- `GET /shop/checkout` - Checkout page
+- `POST /checkout/store` - Process order
+- `GET /contact` - Contact page
+
+### User Routes
+
+- `GET /user/dashboard` - Buyer dashboard
+- `GET /user/orders` - Order history
+
+### Admin Routes (Filament)
+
+- `/admin` - Admin dashboard
+
+## Testing
+
+Run the test suite using Pest:
+
+```bash
+php artisan test
+```
+
+## Development Commands
+
+```bash
+# Generate new migration
+php artisan make:migration migration_name
+
+# Generate new model
+php artisan make:model ModelName
+
+# Generate new controller
+php artisan make:controller ControllerName
+
+# Clear all caches
+php artisan cache:clear
+
+# Start tinker (interactive shell)
+php artisan tinker
+
+# Format code with Pint
+./vendor/bin/pint
+```
+
+## Documentation
+
+For more information, refer to:
+
+- [Laravel Documentation](https://laravel.com/docs)
+- [Filament Documentation](https://filamentphp.com/docs)
+- [Livewire Documentation](https://livewire.laravel.com)
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](LICENSE).
+
+## Support
+
+For issues or questions, please create an issue in the repository or contact the development team.
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
