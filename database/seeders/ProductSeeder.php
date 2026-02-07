@@ -28,7 +28,8 @@ class ProductSeeder extends Seeder
                 'description' => 'High-quality wireless headphones with noise cancellation',
                 'description_notes' => 'Features: Bluetooth 5.0, 30-hour battery life, Active noise cancellation',
                 'category_id' => null, // Will be set below
-                'status' => 'active',
+                'image' => ['product-images/product-1.png'],
+                'status' => 1,
             ],
             [
                 'name' => 'Smart Watch',
@@ -39,7 +40,8 @@ class ProductSeeder extends Seeder
                 'description' => 'Advanced smartwatch with fitness tracking',
                 'description_notes' => 'Features: Heart rate monitor, Sleep tracking, Water resistant',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-2.png'],
+                'status' => 1,
             ],
             [
                 'name' => 'USB-C Cable',
@@ -50,7 +52,8 @@ class ProductSeeder extends Seeder
                 'description' => 'Durable USB-C charging cable',
                 'description_notes' => 'Features: Fast charging, 2 meter length, Durable braided design',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-3.png'],
+                'status' => 1,
             ],
             // Clothing
             [
@@ -62,7 +65,8 @@ class ProductSeeder extends Seeder
                 'description' => 'Premium cotton t-shirt for everyday wear',
                 'description_notes' => 'Features: 100% organic cotton, Machine washable, Available in multiple colors',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-4.png'],
+                'status' => 1,
             ],
             [
                 'name' => 'Denim Jeans',
@@ -73,7 +77,8 @@ class ProductSeeder extends Seeder
                 'description' => 'Classic denim jeans perfect for any occasion',
                 'description_notes' => 'Features: Stretch denim, Classic fit, Multiple size options',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-5.png'],
+                'status' => 1,
             ],
             // Books
             [
@@ -85,7 +90,8 @@ class ProductSeeder extends Seeder
                 'description' => 'How today\'s entrepreneurs use continuous innovation',
                 'description_notes' => 'Author: Eric Ries, Pages: 336, Published: 2011',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-7.png'],
+                'status' => 1,
             ],
             [
                 'name' => 'Clean Code',
@@ -96,7 +102,8 @@ class ProductSeeder extends Seeder
                 'description' => 'A Handbook of Agile Software Craftsmanship',
                 'description_notes' => 'Author: Robert C. Martin, Pages: 464, Published: 2008',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-7.png'],
+                'status' => 1,
             ],
             // Home & Kitchen
             [
@@ -108,7 +115,8 @@ class ProductSeeder extends Seeder
                 'description' => 'Professional knife set for your kitchen',
                 'description_notes' => 'Features: 6-piece set, Ergonomic handles, Dishwasher safe',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-9.png'],
+                'status' => 1,
             ],
             [
                 'name' => 'Coffee Maker',
@@ -119,7 +127,8 @@ class ProductSeeder extends Seeder
                 'description' => 'Programmable coffee maker with thermal carafe',
                 'description_notes' => 'Features: Programmable timer, 12-cup capacity, Auto shutoff',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-9.png'],
+                'status' => 1,
             ],
             // Sports & Outdoors
             [
@@ -131,7 +140,8 @@ class ProductSeeder extends Seeder
                 'description' => 'Non-slip yoga mat for comfortable workouts',
                 'description_notes' => 'Features: TPE material, Non-slip surface, 6mm thickness',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-10.png'],
+                'status' => 1,
             ],
             [
                 'name' => 'Running Shoes',
@@ -142,7 +152,8 @@ class ProductSeeder extends Seeder
                 'description' => 'High-performance running shoes',
                 'description_notes' => 'Features: Cushioned sole, Breathable mesh, Multiple sizes',
                 'category_id' => null,
-                'status' => 'active',
+                'image' => ['product-images/product-11.png'],
+                'status' => 1,
             ],
         ];
 
