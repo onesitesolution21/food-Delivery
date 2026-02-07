@@ -20,27 +20,27 @@ class CategorySeeder extends Seeder
             [
                 'name' => 'Electronics',
                 'slug' => 'electronics',
-                'status' => 'active',
+                'status' => 1,
             ],
             [
                 'name' => 'Clothing',
                 'slug' => 'clothing',
-                'status' => 'active',
+                'status' => 1,
             ],
             [
                 'name' => 'Books',
                 'slug' => 'books',
-                'status' => 'active',
+                'status' => 1,
             ],
             [
                 'name' => 'Home & Kitchen',
                 'slug' => 'home-kitchen',
-                'status' => 'active',
+                'status' => 1,
             ],
             [
                 'name' => 'Sports & Outdoors',
                 'slug' => 'sports-outdoors',
-                'status' => 'active',
+                'status' => 1,
             ],
         ];
 
